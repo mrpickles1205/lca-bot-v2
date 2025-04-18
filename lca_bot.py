@@ -38,7 +38,7 @@ class PDF(FPDF):
 
     def add_table(self, df):
         self.set_font('Arial', 'B', 10)
-        col_width = self.epw / len(df.columns)
+        col_width = (self.w - 2 * self.l_margin) / len(df.columns)
         for col in df.columns:
             self.cell(col_width, 10, col, 1)
         self.ln()
