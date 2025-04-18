@@ -88,25 +88,19 @@ if st.button("Run LCA"):
 
     # Title Page / Header
     pdf.chapter_title("1. Executive Summary")
-    pdf.chapter_body(f"This report presents an ISO-compliant Life Cycle Assessment (LCA) of {product_name}.
+pdf.chapter_body(f\"\"\"This report presents an ISO-compliant Life Cycle Assessment (LCA) of {product_name}.
 
-"
-                     f"**Scope:** Cradle-to-grave
-"
-                     f"**Functional Unit:** 1 unit of {product_name}
-"
-                     f"**Impact Methods:** IPCC 2021 (GWP100), ReCiPe Midpoint (H)
+**Scope:** Cradle-to-grave  
+**Functional Unit:** 1 unit of {product_name}  
+**Impact Methods:** IPCC 2021 (GWP100), ReCiPe Midpoint (H)
 
-"
-                     f"**Key Results:**
-"
-                     f"- GHG Emissions: {ghg_total:.2f} kg CO2-eq
-"
-                     f"- Energy Use: {energy_total:.2f} MJ
-"
-                     f"- Water Use: {water_total:.2f} L
-"
-                     f"- Primary impact contributor: {top_process}")
+**Key Results:**
+- GHG Emissions: {ghg_total:.2f} kg CO2-eq
+- Energy Use: {energy_total:.2f} MJ
+- Water Use: {water_total:.2f} L
+- Primary impact contributor: {top_process}
+\"\"\")
+
 
     pdf.chapter_title("2. Goal and Scope")
     pdf.chapter_body(f"The goal of this study is to quantify the environmental impacts of {product_name} across its full life cycle.
